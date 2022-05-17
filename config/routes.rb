@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  root "homepage#index"
+  #get '/spotify_login', to: 'users#spotify_intercept' 
+  get '/auth/spotify/callback', to: 'users#spotify'
+
+  #resources :users
+
 end

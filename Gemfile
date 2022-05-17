@@ -31,6 +31,9 @@ gem "jbuilder"
 #SPOTIFY GEM
 gem "rspotify"
 
+#figaro, used for env
+gem 'figaro' 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
