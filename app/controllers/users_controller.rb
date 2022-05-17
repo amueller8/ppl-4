@@ -2,16 +2,25 @@ class UsersController < ApplicationController
 
     require 'rspotify/oauth' 
 
-    $tracks = []
+    
     def spotify
+        @allLsts= Lst.all
+        puts "There are #{@allLsts.size} playlists (spotify)."
+
         @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
         session[:spotify_user_hash] = @spotify_user.to_hash
 
         @playlists = @spotify_user.playlists
 
+        
+
     end 
 
     def createArt
+        @allLsts= Lst.all
+        puts "There are #{@allLsts.size} playlists."
+
+
         @playlist = params[:playlistInput]
         puts @playlist 
         #@spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
@@ -22,11 +31,21 @@ class UsersController < ApplicationController
     
         @pl = @spotify_user.playlists[@id.to_i]
 
-        puts @pl.id 
+        puts "ID is," + @pl.id.to_s
 
-        @tracks = @pl.tracks
+        map = {"title" => @playlist, "spotify_id"=> @pl.id.to_s}
 
+        newRow = Lst.new(map)
 
+        respond_to do |format|
+            if newRow.save
+                puts("success! ")
+                    format.html {redirect_to '/auth/spotify/callback' }
+            end
+
+        end
+
+    
        
     end 
 end
