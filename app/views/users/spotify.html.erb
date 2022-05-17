@@ -16,8 +16,11 @@
 
 
 <div>
-<% @allLsts.each do |lst|%>
-    <p>Hi!</p>
+<% @first.tracks.each do |track|%>
+    <div style="width: 200px; background: rgb( <%= track.popularity%>, 100, 100);">
+        <p><%=  track.name + " is "  + track.popularity.to_s %></p>
+    <div>
+    
 <% end %>
 
 

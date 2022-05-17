@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     
     def spotify
         @allLsts= Lst.all
+        @first = RSpotify::Playlist.find_by_id(@allLsts[0].spotify_id)
         puts "There are #{@allLsts.size} playlists (spotify)."
 
         @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
