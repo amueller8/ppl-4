@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #get '/spotify_login', to: 'users#spotify_intercept' 
   get '/auth/spotify/callback', to: 'users#spotify'
 
+  post "/"=> "users#createArt"
   #resources :users
 
 end
