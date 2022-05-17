@@ -17,7 +17,7 @@
 
 <div>
 <% @first.tracks.each do |track|%>
-    <div style="width: 200px; background: rgb( <%= track.popularity%>, 100, 100);">
+    <div style="width: 200px; background: rgb( <%=get-color(track.popularity)[0]%>,<%=get-color(track.popularity)[1]%>,<%=get-color(track.popularity)[2]%>);">
         <p><%=  track.name + " is "  + track.popularity.to_s %></p>
     <div>
     
