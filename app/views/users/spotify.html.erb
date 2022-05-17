@@ -1,0 +1,32 @@
+
+
+<form name = "playlistInput" action = "/" method = "post">
+<label for="playlists">Choose one of your playlists:</label>
+
+<select name="playlistInput" id="playlists" required>
+<% @playlists.each_with_index do |pl, i|%>
+    <option value = "<%=i.to_s%><%= pl.name %>" id = "<%= i %>">  <%= pl.name %> </option>
+<% end %>
+
+</select>
+
+<%=submit_tag "Create Art" %>
+
+</form>
+
+
+<div>
+
+<% if @tracks%>
+    <h1>tracks loaded</h1>
+
+ <% $tracks.each do |track|%>
+    <span><%= track.name + " with popularity of " + track.popularity + ".\n" %></span>
+ <% end %>
+
+<%end%>
+
+
+
+
+</div>
