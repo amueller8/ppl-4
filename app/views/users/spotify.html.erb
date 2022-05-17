@@ -1,4 +1,5 @@
 
+<%= stylesheet_link_tag "page_style", "data-turbo-track": "reload" %>  
 
 <form name = "playlistInput" action = "/" method = "post">
 <label for="playlists">Choose one of your playlists:</label>
@@ -15,9 +16,13 @@
 </form>
 
 
-<div>
+<div id = "palette-container">
 <% @first.tracks.each do |track|%>
+<<<<<<< HEAD
     <div style="width: 200px; background: rgb( <%=get-color(track.popularity)[0]%>,<%=get-color(track.popularity)[1]%>,<%=get-color(track.popularity)[2]%>);">
+=======
+    <div style="background: rgb( <%= track.popularity%>, 100, 100);">
+>>>>>>> 1f0dc60e526b29971367d46da94d5be575c42e03
         <p><%=  track.name + " is "  + track.popularity.to_s %></p>
     <div>
     
