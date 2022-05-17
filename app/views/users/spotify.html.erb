@@ -16,9 +16,9 @@
 </form>
 
 
-<div>
+<div id = "palette-container">
 <% @first.tracks.each do |track|%>
-    <div style="width: 200px; background: rgb( <%= track.popularity%>, 100, 100);">
+    <div style="background: rgb( <%= track.popularity%>, 100, 100);">
         <p><%=  track.name + " is "  + track.popularity.to_s %></p>
     <div>
     
