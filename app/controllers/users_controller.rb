@@ -22,14 +22,10 @@ class UsersController < ApplicationController
     
         @pl = @spotify_user.playlists[@id.to_i]
 
+        puts @pl.id 
+
         @tracks = @pl.tracks
 
-        puts @tracks 
-
-        $tracks << @tracks
-
-        #figure out a redirect back to the spotify.html.erb page
-        redirect_back(fallback_location: root_path)
 
        
     end 
