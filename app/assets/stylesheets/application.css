@@ -18,3 +18,12 @@
      background-color: white;
      text-align: center;
  }
+h1{
+    color: hotpink;
+}
+ a{
+     size: 2em;
+     margin: 1em;
+     text-decoration: none;
+     color: hotpink;
+ }

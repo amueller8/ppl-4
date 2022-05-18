@@ -1,6 +1,9 @@
 
 <%= stylesheet_link_tag "page_style", "data-turbo-track": "reload" %>  
 
+<h2> Playlist Popularity Ranker</h2>
+<br>
+
 <form name = "playlistInput" action = "/" method = "post">
 <label for="playlists">Choose one of your playlists:</label>
 
@@ -17,8 +20,9 @@
 
 
 <div id = "palette-container">
-<% @first.tracks.each do |track|%>
-    <div style="width: 200px; background: rgb( <%=get_color(track.popularity)[0]%>,<%=get_color(track.popularity)[1]%>,<%=get_color(track.popularity)[2]%>);">
+
+<% @recent_tracks.each_with_index do |track, i|%>
+    <div id = "div<%=i%>"style="padding-left: -1em; background: rgb( <%=get_color(track.popularity)[0]%>,<%=get_color(track.popularity)[1]%>,<%=get_color(track.popularity)[2]%>);">
         <p><%=  track.name + " is "  + track.popularity.to_s %></p>
     <div>
     

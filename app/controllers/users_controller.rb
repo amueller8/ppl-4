@@ -4,9 +4,17 @@ class UsersController < ApplicationController
 
     
     def spotify
+
+
         @allLsts= Lst.all
-        @first = RSpotify::Playlist.find_by_id(@allLsts[0].spotify_id)
-        puts "There are #{@allLsts.size} playlists (spotify)."
+
+        if @allLsts.size > 0
+            
+            @recent = RSpotify::Playlist.find_by_id(@allLsts[@allLsts.size - 1].spotify_id)
+            @recent_tracks = @recent.tracks.sort_by {|t| t.popularity}
+            
+            puts "There are #{@allLsts.size} playlists (spotify)."
+        end 
 
         @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
         session[:spotify_user_hash] = @spotify_user.to_hash
@@ -18,8 +26,8 @@ class UsersController < ApplicationController
     end 
 
     def createArt
-        @allLsts= Lst.all
-        puts "There are #{@allLsts.size} playlists."
+        #@allLsts= Lst.all
+        #puts "There are #{@allLsts.size} playlists."
 
 
         @playlist = params[:playlistInput]
