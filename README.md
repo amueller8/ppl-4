@@ -19,7 +19,8 @@ Also, the most recent playlist searched gets loaded upon accessing localhost:300
 (To clear database, run `rake db:migrate db:reset`).
 
 
-##Images
+## Images
+<div align="center">
 
 <img width="598" alt="Screen Shot 2022-05-18 at 10 05 55 AM" src="https://user-images.githubusercontent.com/68559641/169060882-84caf1d7-420b-4e64-bd4f-e51c421dae05.png">
 <img width="563" alt="Screen Shot 2022-05-18 at 10 06 47 AM" src="https://user-images.githubusercontent.com/68559641/169061077-7a543b6a-232f-47c8-aa25-ba820235a6f9.png">
@@ -27,3 +28,4 @@ Also, the most recent playlist searched gets loaded upon accessing localhost:300
 
 
 [playlist popularity ranker.pdf](https://github.com/amueller8/ppl-4/files/8716915/playlist.popularity.ranker.pdf)
+</div>
