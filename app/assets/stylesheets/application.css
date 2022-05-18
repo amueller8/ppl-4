@@ -15,15 +15,31 @@
  */
 
  body{
-     background-color: white;
+     background-color: lightgrey;
      text-align: center;
  }
 h1{
     color: hotpink;
 }
  a{
-     size: 2em;
+     font-size: 1em;
+     margin-top: 2em;
      margin: 1em;
      text-decoration: none;
      color: hotpink;
+     
+ }
+
+ #wrap{
+     background-color: white;
+     border-radius: 4px;
+     padding: 30px;
+     margin: auto;
+     width: 66%;
+     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+     margin-top: 5%;
+     font-family: "Lato", sans-serif;
+ }
+ img{
+     border-radius: 5px;
  }

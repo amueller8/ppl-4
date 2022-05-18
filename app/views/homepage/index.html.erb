@@ -1,10 +1,14 @@
+
+<div id = "wrap">
 <h1>Welcome to Your Spotify Playlist Ranker!</h1>
 
 <div>
 <p> 
-Sign into your spotify account and select one of your playlists to be sorted by its tracks!
-Popular tracks are hot and red, less popular tracks are cold and blue. Pink tracks
-will be somwhere in the middle. 
+Sign into your Spotify account and select one of your playlists to be sorted by its tracks! <br>
+
+The more popular the track, the <span style="color: red;"> hotter and more red </span> it will appear.<br>
+Tracks in the middle will be <span style="color: hotpink;">pink</span> and <span style="color: violet;">purple</span>. <br>
+Less popular tracks are <span style = "color: blue"> blue... cold!</span>
 </p>
 </div>
 
@@ -14,4 +18,5 @@ will be somwhere in the middle.
 
 <div>
 <%= link_to 'Sign in with Spotify', '/auth/spotify' %>
+</div>
 </div>
