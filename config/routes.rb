@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get '/auth/spotify/callback', to: 'users#spotify'
 
   post "/"=> "users#createArt"
-  #resources :users
+  
 
 end

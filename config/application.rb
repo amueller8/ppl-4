@@ -19,7 +19,8 @@ module PPLApp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     
-    RSpotify::authenticate("a7489f3ea4c44c3ab00f03537edfdec1", "579b61bef4e94543ac5fdec9c7097abe")
+
+    RSpotify::authenticate("<client_id>", "<client_secret>")
 
     #this version inspired by robynwang314 on github, to avoid hardcoding keys
     #=begin RSpotify::authenticate(
